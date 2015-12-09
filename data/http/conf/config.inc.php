@@ -1,9 +1,9 @@
 <?php
 $conf['servers'][0]['desc'] = 'PostgreSQL';
-$conf['servers'][0]['host'] = 'postgresql';
-$conf['servers'][0]['port'] = 5432;
+$conf['servers'][0]['host'] = $_SERVER['POSTGRESQL_HOST'];
+$conf['servers'][0]['port'] = $_SERVER['POSTGRESQL_PORT'];
 $conf['servers'][0]['sslmode'] = 'allow';
-$conf['servers'][0]['defaultdb'] = 'pg';
+$conf['servers'][0]['defaultdb'] = $_SERVER['POSTGRESQL_DEFAULT_DB'];
 $conf['servers'][0]['pg_dump_path'] = '/usr/bin/pg_dump';
 $conf['servers'][0]['pg_dumpall_path'] = '/usr/bin/pg_dumpall';
 $conf['default_lang'] = 'auto';
